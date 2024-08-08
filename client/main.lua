@@ -97,15 +97,6 @@ local function onEnter(self)
                         end
                     end
                 },
-                {
-                    label = 'Deliver Goods',
-                    action = function()
-                        exports.delivery:deliver(self.key, self.locationId)
-                    end,
-                    canInteract = function()
-                        return exports.delivery:isDeliverLocation(self.key, self.locationId)
-                    end
-                }
             }
         })
     else

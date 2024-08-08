@@ -234,14 +234,12 @@
     }
 
     .shop-actions {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-		justify-content: flex-start;
-        height: auto;
-		width: auto;
-        /* margin: 5px; */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+		  justify-content: flex-start;
+      height: auto;
+		  width: auto;
     }
 	
     .catergories-container {
@@ -292,7 +290,7 @@
         width: 550px;
         display: flex;
         flex-direction: column;
-        background-color: #08090cee;
+        background-color: var(--dark);
     }
 
     .shop-header {
@@ -313,7 +311,7 @@
     }
 
     .shop-header h1 span {
-        color: white;
+        color: var(--accent);
     }
 
     .shop-monetary-container {
@@ -355,7 +353,7 @@
     }
 
     .shop-cart p span {
-        color: white;
+        color: var(--accent);
     }
 
     .player-bank {
@@ -375,7 +373,7 @@
     }
 
     .player-bank p span {
-        color: white;
+        color: var(--accent);
     }
 
     .player-cash {
@@ -395,7 +393,7 @@
     }
 
     .player-cash p span {
-        color: white;
+        color: var(--accent);
     }
 
     .shop-items-container {
@@ -457,7 +455,7 @@
     /* Track */
     ::-webkit-scrollbar-track {
         border-radius: 4px;
-        background: #f1f1f1; /* color of the track */
+        background: var(--accent); /* color of the track */
     }
 
     /* Handle */
@@ -468,6 +466,6 @@
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: var(--accent-color); /* color of the scrollbar handle on hover */
+        background: var(--accent); /* color of the scrollbar handle on hover */
     }
 </style>

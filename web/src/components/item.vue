@@ -112,7 +112,7 @@
     }
     
     .shop-item-price .item-price {
-        color: white;
+        color: var(--accent);
     }
 
     .shop-item-image-container {
@@ -180,6 +180,6 @@
     .item-purchase p {
         padding: 5px;
         border-radius: 8px;
-        color: white;
+        color: var(--accent);
     }
 </style>

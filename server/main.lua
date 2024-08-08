@@ -90,7 +90,8 @@ end
 local function getShopItems(shop, source)
     local player = exports.qbx_core:GetPlayer(source)
     local job, grade = player.PlayerData.job.name, player.PlayerData.job.grade.level
-    local rep = exports.reputation:GetAllRep(player.PlayerData.citizenid)
+
+    local repEnabled = (GetResourceState('reputation') == 'started')
     local items = {}
 
     for item, data in pairs(shop.items) do
@@ -108,11 +109,16 @@ local function getShopItems(shop, source)
             jobCheck = true
         end
 
-        if data.rep then
-            for name, amount in pairs(data.rep) do
-                if rep[name] and rep[name] >= amount then
-                    repCheck = true
+        if repEnabled then
+            local rep = exports.reputation:GetAllRep(player.PlayerData.citizenid)
+            if data.rep then
+                for name, amount in pairs(data.rep) do
+                    if rep[name] and rep[name] >= amount then
+                        repCheck = true
+                    end
                 end
+            else
+                repCheck = true
             end
         else
             repCheck = true
